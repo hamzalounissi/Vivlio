@@ -3,10 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package management;
+
+
 
 /**
  *
  * @author lounissi
  */
-public enum EtatOuvrage {bon,moyen,abime}
+public interface IAdherent {
+    public boolean reserverLivre(int ida, int ido);
+}

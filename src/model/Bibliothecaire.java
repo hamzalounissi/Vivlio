@@ -5,13 +5,15 @@
  */
 package model;
 
-import java.util.Date;
+
 import java.util.ArrayList;
+
+
 /**
  *
  * @author lounissi
  */
-public class Bibliothecaire extends Assistant{
+public class Bibliothecaire extends Assistant {
 
     
     private ArrayList<Ouvrage> ouvrageDansBibliotheque;
@@ -23,32 +25,32 @@ public class Bibliothecaire extends Assistant{
     }
 
     public Bibliothecaire(int idbib,int idas,String login, String mpasse, int id, String nom,
-            String prenom, String email, String adresse, int numero, Date dateNaissance) {
+            String prenom, String email, String adresse) {
        
-        super(login, mpasse, id, nom, prenom, email, adresse, numero, dateNaissance);
+        super(login, mpasse, id, nom, prenom, email, adresse);
         
     }
 
     public Bibliothecaire(String login, String mpasse, ArrayList<Notice> lesNotices, 
-            int id, String nom, String prenom, String email, String adresse, int numero, Date dateNaissance) {
+            int id, String nom, String prenom, String email, String adresse) {
         
-        super(login, mpasse, lesNotices, id, nom, prenom, email, adresse, numero, dateNaissance);
+        super(login, mpasse, lesNotices, id, nom, prenom, email, adresse);
     }
 
     public Bibliothecaire(ArrayList<Ouvrage> ouvrageDansBibliotheque, ArrayList<Adherent> adherentBibliotheque, 
             String login, String mpasse, 
-            int id, String nom, String prenom, String email, String adresse, int numero, Date dateNaissance) {
+            int id, String nom, String prenom, String email, String adresse) {
         
-        super(login, mpasse, id, nom, prenom, email, adresse, numero, dateNaissance);
+        super(login, mpasse, id, nom, prenom, email, adresse);
         this.ouvrageDansBibliotheque.addAll(ouvrageDansBibliotheque);
         this.adherentBibliotheque.addAll(adherentBibliotheque);
     }
 
     public Bibliothecaire(ArrayList<Ouvrage> ouvrageDansBibliotheque, ArrayList<Adherent> adherentBibliotheque,
             String login, String mpasse, ArrayList<Notice> lesNotices, 
-            int id, String nom, String prenom, String email, String adresse, int numero, Date dateNaissance) {
+            int id, String nom, String prenom, String email, String adresse) {
         
-        super(login, mpasse, lesNotices, id, nom, prenom, email, adresse, numero, dateNaissance);
+        super(login, mpasse, lesNotices, id, nom, prenom, email, adresse);
         this.ouvrageDansBibliotheque.addAll(ouvrageDansBibliotheque);
         this.adherentBibliotheque.addAll(adherentBibliotheque);
     }
@@ -68,11 +70,5 @@ public class Bibliothecaire extends Assistant{
     public void setAdherentBibliotheque(ArrayList<Adherent> adherentBibliotheque) {
         this.adherentBibliotheque.addAll(adherentBibliotheque);
     }
-    
-    
-
-    
-    
-     
-    
+   
 }
