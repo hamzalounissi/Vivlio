@@ -18,4 +18,5 @@ public interface IAssistant {
 	public ArrayList<Ouvrage> chercherOuvrage();
 	public boolean gererRetour(int ida, int ido);
 	public ArrayList<FicheAdherent> savoirEmpruntEncours();
+        public ArrayList<FicheAdherent> savoirReservationEncours();
 }

@@ -5,9 +5,8 @@
         <group>
             <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/src/management/MBibliothecaire.java</file>
             <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/test/Test.java</file>
-            <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/src/management/MAdherent.java</file>
             <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/src/management/MAssistant.java</file>
-            <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/src/management/IBibliothecaire.java</file>
+            <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/src/management/IAssistant.java</file>
         </group>
     </open-files>
 </project-private>

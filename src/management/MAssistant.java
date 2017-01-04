@@ -12,8 +12,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import model.Adherent;
 import model.Categorie;
 import model.Etat;
@@ -134,6 +132,34 @@ public class MAssistant implements IAssistant{
         } catch (SQLException ex) { }
         DBInteraction.disconnect();
         return lesFichesAdherents;
+    }
+
+    @Override
+    public ArrayList<FicheAdherent> savoirReservationEncours() {
+       ArrayList<FicheAdherent> listeReservationEncours=new ArrayList<>();
+       FicheAdherent fa;
+        ResultSet rs;
+        DBInteraction.connect();
+        rs =  DBInteraction.select("SELECT ficheadherent.idFicheAdherent, ficheadherent.dateEmprunte, ficheadherent.dateRetour,"
+                + "ouvrage.idOuvrage, ouvrage.titre, adherent.idAdherent, adherent.nom FROM ficheadherent "
+                + "inner join ouvrage on ficheadherent.idOuvrage = ouvrage.idOuvrage "
+                + "inner join adherent on ficheadherent.idAdherent = adherent.idAdherent "
+                + "where ficheadherent.dateEmprunte is null and ficheadherent.dateRetour is null ");
+        try {
+            while(rs.next())
+            {
+                 fa=new FicheAdherent();
+                 fa.setIdFicheAd(rs.getInt(1));
+                 fa.setDatePret(rs.getDate(2));
+                 fa.setDateRetour(rs.getString(3));
+                 fa.setOuvrage(new Ouvrage(rs.getInt(4), rs.getString(5)));
+                 fa.setAdherent(new Adherent(rs.getInt(6),rs.getString(7)));
+                 listeReservationEncours.add(fa);
+            }
+        } catch (SQLException ex) { }
+        DBInteraction.disconnect();
+       
+       return listeReservationEncours;
     }
 
   

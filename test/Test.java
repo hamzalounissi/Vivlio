@@ -92,13 +92,15 @@ public class Test {
         
         */
         
-        //fich = mass.savoirEmpruntEncours();
+        //fich = mass.savoirReservationEncours();
         /*
         fich = mb.verifierRetour();
+                */
+        fich = ma.savoirReservationEncours(3);
         for (FicheAdherent f:fich){
-           System.out.println("Nom "+f.getAdherent().getNom());
+          System.out.println("Nom "+f.getAdherent().getNom());
         }
-        */
+        
         
         }
     

@@ -5,6 +5,9 @@
  */
 package management;
 
+import java.util.ArrayList;
+import model.FicheAdherent;
+
 
 
 /**
@@ -13,4 +16,6 @@ package management;
  */
 public interface IAdherent {
     public boolean reserverLivre(int ida, int ido);
+    public ArrayList<FicheAdherent> savoirEmprunteEncours(int idA);
+    public ArrayList<FicheAdherent> savoirReservationEncours(int idA);
 }
