@@ -34,11 +34,19 @@ public class Ouvrage {
     } 
     
      public Ouvrage(String titre, String auteur, String fond, 
+<<<<<<< HEAD
             Etat etatOuvrage, Categorie categorieOuvrage) {
+=======
+            Etat etatOuvrage, Notice noticeOuvrage, Categorie categorieOuvrage) {
+>>>>>>> origin/master
         this.titre = titre;
         this.auteur = auteur;
         this.fond = fond;
         this.etat = etatOuvrage;
+<<<<<<< HEAD
+=======
+        this.noticeOuvrage = noticeOuvrage;
+>>>>>>> origin/master
         this.categorieOuvrage = categorieOuvrage;
     } 
     public Ouvrage(int id,String titre, String auteur, String fond, 

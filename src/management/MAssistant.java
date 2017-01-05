@@ -12,8 +12,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+<<<<<<< HEAD
 import java.util.logging.Level;
 import java.util.logging.Logger;
+=======
+>>>>>>> origin/master
 import model.Adherent;
 import model.Categorie;
 import model.Etat;
@@ -26,7 +29,11 @@ import model.Ouvrage;
  *
  * @author lounissi
  */
+<<<<<<< HEAD
 public class MAssistant implements IAssistant,I_Authentifier{
+=======
+public class MAssistant implements IAssistant{
+>>>>>>> origin/master
 
     @Override
     public boolean validerEmprunte(int ida, int ido) {
@@ -60,11 +67,17 @@ public class MAssistant implements IAssistant,I_Authentifier{
 	calendar.setTime(new Date());
         calendar.add(Calendar.DAY_OF_MONTH, duree);
         datefin= date.format(calendar.getTime());
+<<<<<<< HEAD
         System.out.println(sqlDate+"  "+datefin);
         DBInteraction.connect();
         int n = DBInteraction.Maj("UPDATE `ficheadherent` SET `dateEmprunte` = '"+sqlDate+"', `dateRetour` = '"+datefin+"' "
                 + "WHERE `ficheadherent`.`idAdherent` = "+ida+" AND `ficheadherent`.`idOuvrage` = "+ido+"");
         System.out.println("retour " +n);
+=======
+
+        DBInteraction.Maj("UPDATE `ficheadherent` SET `dateEmprunte` = '"+sqlDate+"', `dateRetour` = '"+datefin+"' "
+                + "WHERE `ficheadherent`.`idAdherent` = "+ida+" AND `ficheadherent`.`idOuvrage` = "+ido+"");
+>>>>>>> origin/master
         DBInteraction.disconnect();
         return var;
     }
@@ -166,6 +179,7 @@ public class MAssistant implements IAssistant,I_Authentifier{
        return listeReservationEncours;
     }
 
+<<<<<<< HEAD
     @Override
     public boolean authentifier(String email, String pwd) {
 
@@ -183,6 +197,8 @@ public class MAssistant implements IAssistant,I_Authentifier{
         return false;
     }
 
+=======
+>>>>>>> origin/master
   
     
 }

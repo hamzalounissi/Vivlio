@@ -9,8 +9,11 @@ import dataBaseInteraction.DBInteraction;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.logging.Level;
 import java.util.logging.Logger;
+=======
+>>>>>>> origin/master
 import model.Adherent;
 import model.FicheAdherent;
 import model.Ouvrage;
@@ -20,10 +23,15 @@ import model.Ouvrage;
  *
  * @author lounissi
  */
+<<<<<<< HEAD
 public class MAdherent extends MVisiteur implements IAdherent,I_Authentifier{
     
     
     
+=======
+public class MAdherent extends MVisiteur implements IAdherent{
+
+>>>>>>> origin/master
     @Override
     public boolean reserverLivre(int ida, int ido) {
         
@@ -103,6 +111,7 @@ public class MAdherent extends MVisiteur implements IAdherent,I_Authentifier{
         return reservationEncours;
     }
 
+<<<<<<< HEAD
     @Override
     public boolean authentifier(String email, String pwd) {
 
@@ -147,5 +156,7 @@ public class MAdherent extends MVisiteur implements IAdherent,I_Authentifier{
         
     }
 
+=======
+>>>>>>> origin/master
     
 }

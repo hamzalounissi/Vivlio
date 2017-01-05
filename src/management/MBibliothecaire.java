@@ -13,8 +13,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+<<<<<<< HEAD
 import java.util.logging.Level;
 import java.util.logging.Logger;
+=======
+>>>>>>> origin/master
 import model.Adherent;
 import model.FicheAdherent;
 import model.Ouvrage;
@@ -194,6 +197,7 @@ public class MBibliothecaire extends MAssistant implements IBibliothecaire{
         return id;
     }
     
+<<<<<<< HEAD
     public boolean authentifier(String email,String pwd){
         ResultSet rs;
         DBInteraction.connect();
@@ -209,5 +213,7 @@ public class MBibliothecaire extends MAssistant implements IBibliothecaire{
         return false;
     }
     
+=======
+>>>>>>> origin/master
     
 }

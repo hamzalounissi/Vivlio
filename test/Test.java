@@ -6,12 +6,21 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+<<<<<<< HEAD
+=======
+import management.MAdherent;
+import management.MAssistant;
+>>>>>>> origin/master
 import management.MBibliothecaire;
 import management.MVisiteur;
 import model.Bibliothecaire;
 import model.Categorie;
 import model.Etat;
 import model.EtatOuvrage;
+<<<<<<< HEAD
+=======
+import model.FicheAdherent;
+>>>>>>> origin/master
 import model.Libelle;
 import model.Ouvrage;
 import model.Visiteur;
@@ -19,7 +28,11 @@ import model.Visiteur;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
+<<<<<<< HEAD
  * and open the template in the editor.
+=======
+     * and open the template in the editor.
+>>>>>>> origin/master
  */
 
 /**
@@ -32,8 +45,17 @@ public class Test {
         //launch(args);
        // Bibliothecaire bib = new Bibliothecaire();
         MBibliothecaire mb= new MBibliothecaire();
+<<<<<<< HEAD
          MVisiteur mv = new MVisiteur();
          ArrayList<Ouvrage> arrr = new ArrayList<>();
+=======
+        
+         MVisiteur mv = new MVisiteur();
+         MAdherent ma = new MAdherent();
+         MAssistant mass = new MAssistant();
+         ArrayList<Ouvrage> arrr = new ArrayList<>();
+         ArrayList<FicheAdherent> fich = new ArrayList<>();
+>>>>>>> origin/master
         /*    
         Categorie c = new Categorie();
         c.setLibelle(Libelle.BandeDessinee);
@@ -64,8 +86,43 @@ public class Test {
         }
         */
         
+<<<<<<< HEAD
          Visiteur v = new Visiteur("nom", "prenom", "email", "adresse", "mpasse");
          mv.sinscrire(v);
     }
+=======
+        // Visiteur v = new Visiteur("nom", "prenom", "email", "adresse", "mpasse");
+        // mv.sinscrire(v);
+        
+       // boolean res = ma.reserverLivre(4, 1);
+        // System.out.println("RES "+res);
+       /*
+        arrr = mass.chercherOuvrage();
+        for (Ouvrage ov : arrr){
+            System.out.println("Test.main()");
+            System.out.println(ov);
+            System.out.println(ov.getEtat().getId());
+            System.out.println(ov.getEtat().getEtatO());
+            System.out.println(ov.getCategorieOuvrage().getIdcat());
+            System.out.println(ov.getCategorieOuvrage().getLibelle());
+            System.out.println(ov.getCategorieOuvrage().getDureepret());
+           System.out.println("------------------------------");
+           
+        }
+        
+        */
+        
+        //fich = mass.savoirReservationEncours();
+        /*
+        fich = mb.verifierRetour();
+                */
+        fich = ma.savoirReservationEncours(3);
+        for (FicheAdherent f:fich){
+          System.out.println("Nom "+f.getAdherent().getNom());
+        }
+        
+        
+        }
+>>>>>>> origin/master
     
 }

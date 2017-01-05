@@ -16,8 +16,12 @@ public class Adherent extends Visiteur {
     private Bibliothecaire bibliothecaire;
 
     public Adherent() {
+<<<<<<< HEAD
         bibliothecaire = new Bibliothecaire();
         bibliothecaire.setId(1);
+=======
+        
+>>>>>>> origin/master
     }
     
     public Adherent(int id, String nom) {

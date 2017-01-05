@@ -3,12 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/6/Documents/NetBeansProjects/Bibliotheque/src/bibliotheque/GUI_Assistant.java</file>
             <file>file:/C:/Users/6/Documents/NetBeansProjects/Bibliotheque/src/management/MAdherent.java</file>
             <file>file:/C:/Users/6/Documents/NetBeansProjects/Bibliotheque/src/bibliotheque/GUI_Adherent.java</file>
             <file>file:/C:/Users/6/Documents/NetBeansProjects/Bibliotheque/src/bibliotheque/GUI_Bibliothecaire.java</file>
             <file>file:/C:/Users/6/Documents/NetBeansProjects/Bibliotheque/src/bibliotheque/GUI_Authentification.java</file>
             <file>file:/C:/Users/6/Documents/NetBeansProjects/Bibliotheque/src/bibliotheque/GUI_Visiteur.java</file>
+=======
+            <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/src/management/MBibliothecaire.java</file>
+            <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/test/Test.java</file>
+            <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/src/management/MAssistant.java</file>
+            <file>file:/C:/Users/lounissi/Documents/NetBeansProjects/Bibliotheque/src/management/IAssistant.java</file>
+>>>>>>> origin/master
         </group>
     </open-files>
 </project-private>
