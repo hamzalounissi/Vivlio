@@ -34,13 +34,20 @@ public class Etat {
         this.id = id;
     }
 
-    public EtatOuvrage isEtat() {
+    public EtatOuvrage getEtatO() {
         return etat;
     }
 
-    public void setEtat(EtatOuvrage etat) {
+    public void setEtatO(EtatOuvrage etat) {
         this.etat = etat;
     }
+
+    @Override
+    public String toString() {
+        return "Etat{" + "id=" + id + ", etat=" + etat + '}';
+    }
+
+    
     
     
     

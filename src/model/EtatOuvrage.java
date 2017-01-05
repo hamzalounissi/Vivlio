@@ -9,4 +9,4 @@ package model;
  *
  * @author lounissi
  */
-public enum EtatOuvrage {Bon,Moyen,Abime}
+public enum EtatOuvrage {bon,moyen,abime}

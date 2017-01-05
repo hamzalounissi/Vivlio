@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.util.Date;
 import java.util.ArrayList;
 
 /**
@@ -23,14 +22,14 @@ public class Assistant extends Personne{
         lesNotices = new ArrayList<>();
     }
 
-    public Assistant(String login, String mpasse, int id, String nom, String prenom, String email, String adresse, int numero, Date dateNaissance) {
-        super(id, nom, prenom, email, adresse, numero, dateNaissance);
+    public Assistant(String login, String mpasse, int id, String nom, String prenom, String email, String adresse) {
+        super(id, nom, prenom, email, adresse);
         this.login = login;
         this.mpasse = mpasse;
     }
 
-    public Assistant(String login, String mpasse, ArrayList<Notice> lesNotices, int id, String nom, String prenom, String email, String adresse, int numero, Date dateNaissance) {
-        super(id, nom, prenom, email, adresse, numero, dateNaissance);
+    public Assistant(String login, String mpasse, ArrayList<Notice> lesNotices, int id, String nom, String prenom, String email, String adresse) {
+        super(id, nom, prenom, email, adresse);
         this.login = login;
         this.mpasse = mpasse;
         this.lesNotices.addAll(lesNotices);

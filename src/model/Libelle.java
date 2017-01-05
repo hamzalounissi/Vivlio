@@ -9,10 +9,10 @@ package model;
  *
  * @author lounissi
  */
-public enum Libelle {BandeDessinee,
-                     Romans,
-                     Art,
-                     Histoire,
-                     GuideVoyage,
-                     Revue
+public enum Libelle {bandeDessinee,
+                     romans,
+                     art,
+                     histoire,
+                     guidevoyage,
+                     revue
                     }

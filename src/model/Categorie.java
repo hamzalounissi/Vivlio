@@ -15,7 +15,6 @@ public class Categorie {
     
     private int idcat;
     private Libelle libelle;
-    private boolean empruntable;
     private int dureepret;
     private ArrayList<Ouvrage> ouvrageCategorie;
 
@@ -24,17 +23,23 @@ public class Categorie {
     }
 
     
-    public Categorie(Libelle libelle, boolean empruntable, int dureepret, ArrayList<Ouvrage> ouvCat) {
+    public Categorie(Libelle libelle, ArrayList<Ouvrage> ouvCat) {
         this.libelle = libelle;
-        this.empruntable = empruntable;
-        this.dureepret = dureepret;
         ouvrageCategorie.addAll(ouvCat);
     }
+
+    public Categorie(int idcat, Libelle libelle, int dureepret) {
+        this.idcat = idcat;
+        this.libelle = libelle;
+        this.dureepret = dureepret;
+    }
     
-    public Categorie(int idcat,Libelle libelle, boolean empruntable, int dureepret, ArrayList<Ouvrage> ouvCat) {
+    
+    
+    public Categorie(int idcat,Libelle libelle, int dureepret, ArrayList<Ouvrage> ouvCat) {
         this.idcat=idcat;
         this.libelle = libelle;
-        this.empruntable = empruntable;
+  
         this.dureepret = dureepret;
         ouvrageCategorie.addAll(ouvCat);
     }
@@ -55,14 +60,6 @@ public class Categorie {
         this.libelle = libelle;
     }
 
-    public boolean isEmpruntable() {
-        return empruntable;
-    }
-
-    public void setEmpruntable(boolean empruntable) {
-        this.empruntable = empruntable;
-    }
-
     public int getDureepret() {
         return dureepret;
     }
@@ -77,6 +74,11 @@ public class Categorie {
 
     public void setOuvrageCategorie(ArrayList<Ouvrage> ouvrageCategorie) {
         this.ouvrageCategorie.addAll(ouvrageCategorie);
+    }
+
+    @Override
+    public String toString() {
+        return "Categorie{" + "idcat=" + idcat + ", libelle=" + libelle + ", dureepret=" + dureepret + ", ouvrageCategorie=" + ouvrageCategorie + '}';
     }
     
     

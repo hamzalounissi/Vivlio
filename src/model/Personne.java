@@ -5,7 +5,7 @@
  */
 package model;
 
-import java.util.Date;
+
 
 /**
  *
@@ -18,21 +18,29 @@ public class Personne {
     private String prenom;
     private String email;
     private String adresse;
-    private int numero;
-    private Date dateNaissance;
 
     public Personne() {
      super();
     }
+    
+    public Personne(int id, String nom) {
+        this.idp = id;
+        this.nom = nom;
+    }
 
-    public Personne(int id, String nom, String prenom, String email, String adresse, int numero, Date dateNaissance) {
+    public Personne(String nom, String prenom, String email, String adresse) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.adresse = adresse;
+    }
+    
+    public Personne(int id, String nom, String prenom, String email, String adresse) {
         this.idp = id;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.adresse = adresse;
-        this.numero = numero;
-        this.dateNaissance = dateNaissance;
     }
 
     public int getId() {
@@ -75,26 +83,11 @@ public class Personne {
         this.adresse = adresse;
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public Date getDateNaissance() {
-        return dateNaissance;
-    }
-
-    public void setDateNaissance(Date dateNaissance) {
-        this.dateNaissance = dateNaissance;
-    }
 
     @Override
     public String toString() {
         return "id : " + idp + ", nom : " + nom + ", prenom : " + prenom + ", email : " + 
-                email + ", adresse : " + adresse + ", numero : " + numero + ", dateNaissance : " + dateNaissance;
+                email + ", adresse : " + adresse;
     }
     
     

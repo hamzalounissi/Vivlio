@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 déc. 2016, 02:45:38
+    Author     : GROLA ELMAHDI
+*/
+
+.list-view {
+    -fx-padding: 3px ;
+    -fx-background-color: darkred ;
+}
+
+.list-cell {
+    -fx-padding: 2px ;
+    -fx-background-color: transparent, -fx-background ;
+    -fx-background-insets: 0px, 2px ;
+}
+
+.list-cell:empty {
+    -fx-padding: 2px ;
+    -fx-background-color: transparent ;
+    -fx-background-insets: 0 ;
+}
+

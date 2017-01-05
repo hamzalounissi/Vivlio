@@ -6,6 +6,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.sql.Date;
 
 
 /**
@@ -15,14 +16,25 @@ import java.util.ArrayList;
 public class FicheAdherent {
     
     private int idFicheAd;
-    private ArrayList<Ouvrage> ouvrageReserve;
     private Adherent adherent;
+    private Date datePret;
+    private String dateRetour;
+    private Ouvrage ouvrage;
+    private ArrayList<Ouvrage> ouvrageReserve;
     private ArrayList<Ouvrage> ouvrageEmprunte;
 
     public FicheAdherent() {
        ouvrageReserve = new ArrayList<>();
        ouvrageEmprunte = new ArrayList<>();
        adherent = new Adherent();
+    }
+
+    public FicheAdherent(int idFicheAd, Adherent adherent, Date datePret, String dateRetour, Ouvrage ouvrage) {
+        this.idFicheAd = idFicheAd;
+        this.adherent = adherent;
+        this.datePret = datePret;
+        this.dateRetour = dateRetour;
+        this.ouvrage = ouvrage;
     }
     
     public FicheAdherent(int id,Adherent ad,ArrayList<Ouvrage> ouvRese,ArrayList<Ouvrage> ouvEmp) {
@@ -32,6 +44,13 @@ public class FicheAdherent {
         ouvrageEmprunte.addAll(ouvEmp);
     }
 
+    public FicheAdherent(int id,Adherent ad,ArrayList<Ouvrage> ouvEmp) {
+        idFicheAd=id;
+        adherent = ad;
+        ouvrageEmprunte.addAll(ouvEmp);
+    }
+    
+    
     public int getIdFicheAd() {
         return idFicheAd;
     }
@@ -64,6 +83,31 @@ public class FicheAdherent {
         this.ouvrageEmprunte = ouvrageEmprunte;
     }
 
+    public Date getDatePret() {
+        return datePret;
+    }
+
+    public void setDatePret(Date datePret) {
+        this.datePret = datePret;
+    }
+
+    public String getDateRetour() {
+        return dateRetour;
+    }
+
+    public void setDateRetour(String dateRetour) {
+        this.dateRetour = dateRetour;
+    }
+
+    public Ouvrage getOuvrage() {
+        return ouvrage;
+    }
+
+    public void setOuvrage(Ouvrage ouvrage) {
+        this.ouvrage = ouvrage;
+    }
+    
+    
     
     
     

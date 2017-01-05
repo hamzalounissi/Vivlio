@@ -5,8 +5,6 @@
  */
 package model;
 
-import java.util.Date;
-
 
 
 /**
@@ -15,48 +13,32 @@ import java.util.Date;
  */
 public class Adherent extends Visiteur {
     
-    private String login;
-    private String mpasse;
     private Bibliothecaire bibliothecaire;
 
     public Adherent() {
-        
-    }
-
-    public Adherent(String login, String mpasse, int id, String nom, String prenom, String email, String adresse, int numero, Date dateNaissance) {
-        super(id, nom, prenom, email, adresse, numero, dateNaissance);
-       
-        this.login = login;
-        this.mpasse = mpasse;
-    }
-
-    public Adherent(String login, String mpasse, Bibliothecaire bibliothecaire, int id, String nom, String prenom, String email, String adresse, int numero, Date dateNaissance) {
-        super(id, nom, prenom, email, adresse, numero, dateNaissance);
-        this.login = login;
-        this.mpasse = mpasse;
-        this.bibliothecaire = bibliothecaire;
+        bibliothecaire = new Bibliothecaire();
+        bibliothecaire.setId(1);
     }
     
+    public Adherent(int id, String nom) {
+        super(id, nom);
+    }
+
+    public Adherent(String mpasse, String nom, String prenom, String email, String adresse) {
+        super(mpasse, nom, prenom, email, adresse);
+    }
     
-    public String getLogin() {
-        return login;
+    public Adherent(int id, String nom, String prenom, String email, String adresse, String mpasse) {
+        super(id, nom, prenom, email, adresse, mpasse);
     }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getMpasse() {
-        return mpasse;
-    }
-
-    public void setMpasse(String mpasse) {
-        this.mpasse = mpasse;
-    }
+    
+    
+    
 
     @Override
     public String toString() {
-        return super.toString()+"login=" + login + ", mpasse=" + mpasse;
+        return super.toString();
     }
      
     

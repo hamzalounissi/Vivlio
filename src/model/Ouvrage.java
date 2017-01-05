@@ -14,44 +14,61 @@ import java.util.Date;
 public class Ouvrage {
     private int idOuv;
     private String titre;
-    private String isbn;
     private String auteur;
-    private String editeur;
-    private Date dateEdition;
-    private Etat etatOuvrage;
+    private String fond;
+    private Etat etat;
     private Notice noticeOuvrage;
     private Categorie categorieOuvrage;
     private Bibliothecaire bibliothecaireResp;
 
     public Ouvrage() {
-        etatOuvrage=new Etat();
+        etat=new Etat();
         noticeOuvrage=new Notice();
         categorieOuvrage=new Categorie();
         bibliothecaireResp=new Bibliothecaire();
     }
+    
+     public Ouvrage(int idOuv,String titre) {
+         this.idOuv = idOuv;
+         this.titre = titre;
+    } 
+    
+     public Ouvrage(String titre, String auteur, String fond, 
+            Etat etatOuvrage, Categorie categorieOuvrage) {
+        this.titre = titre;
+        this.auteur = auteur;
+        this.fond = fond;
+        this.etat = etatOuvrage;
+        this.categorieOuvrage = categorieOuvrage;
+    } 
+    public Ouvrage(int id,String titre, String auteur, String fond, 
+            Etat etatOuvrage, Categorie categorieOuvrage) {
+        this.idOuv= id;
+        this.titre = titre;
+        this.auteur = auteur;
+        this.fond = fond;
+        this.etat = etatOuvrage;
+        this.categorieOuvrage = categorieOuvrage;
+    } 
 
-    public Ouvrage(String titre, String isbn, String auteur, String editeur, Date dateEdition, 
+    public Ouvrage(String titre, String auteur, String fond, 
             Etat etatOuvrage, Notice noticeOuvrage, Categorie categorieOuvrage, Bibliothecaire bibliothecaireResp) {
         this.titre = titre;
-        this.isbn = isbn;
         this.auteur = auteur;
-        this.editeur = editeur;
-        this.dateEdition = dateEdition;
-        this.etatOuvrage = etatOuvrage;
+        this.fond = fond;
+        this.etat = etatOuvrage;
         this.noticeOuvrage = noticeOuvrage;
         this.categorieOuvrage = categorieOuvrage;
         this.bibliothecaireResp = bibliothecaireResp;
     } 
 
-    public Ouvrage(int idOuv, String titre, String isbn, String auteur, String editeur, Date dateEdition,
+    public Ouvrage(int idOuv, String titre, String auteur, String fond,
             Etat etatOuvrage, Notice noticeOuvrage, Categorie categorieOuvrage, Bibliothecaire bibliothecaireResp) {
         this.idOuv = idOuv;
         this.titre = titre;
-        this.isbn = isbn;
         this.auteur = auteur;
-        this.editeur = editeur;
-        this.dateEdition = dateEdition;
-        this.etatOuvrage = etatOuvrage;
+        this.fond = fond;
+        this.etat = etatOuvrage;
         this.noticeOuvrage = noticeOuvrage;
         this.categorieOuvrage = categorieOuvrage;
         this.bibliothecaireResp = bibliothecaireResp;
@@ -73,14 +90,6 @@ public class Ouvrage {
         this.titre = titre;
     }
 
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
     public String getAuteur() {
         return auteur;
     }
@@ -89,28 +98,20 @@ public class Ouvrage {
         this.auteur = auteur;
     }
 
-    public String getEditeur() {
-        return editeur;
+    public String getFond() {
+        return fond;
     }
 
-    public void setEditeur(String editeur) {
-        this.editeur = editeur;
+    public void setFond(String fond) {
+        this.fond = fond;
     }
 
-    public Date getDateEdition() {
-        return dateEdition;
+    public Etat getEtat() {
+        return etat;
     }
 
-    public void setDateEdition(Date dateEdition) {
-        this.dateEdition = dateEdition;
-    }
-
-    public Etat getEtatOuvrage() {
-        return etatOuvrage;
-    }
-
-    public void setEtatOuvrage(Etat etatOuvrage) {
-        this.etatOuvrage = etatOuvrage;
+    public void setEtat(Etat etat) {
+        this.etat = etat;
     }
 
     public Notice getNoticeOuvrage() {
@@ -136,6 +137,12 @@ public class Ouvrage {
     public void setBibliothecaireResp(Bibliothecaire bibliothecaireResp) {
         this.bibliothecaireResp = bibliothecaireResp;
     }
+
+    @Override
+    public String toString() {
+        return "Ouvrage{" + "idOuv=" + idOuv + ", titre=" + titre + ", auteur=" + auteur + ", fond=" + fond + '}';
+    }
+    
     
     
 }

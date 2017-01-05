@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 déc. 2016, 18:51:49
+    Author     : 6
+*/
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 déc. 2016, 02:45:38
+    Author     : GROLA ELMAHDI
+*/
+
+.list-view {
+    -fx-padding: 10px ;
+    -fx-background-color: #1d8c97 ;
+}
+
+.list-cell {
+    -fx-padding: 10px ;
+    -fx-background-color:#1d8c97 ;
+    -fx-background-insets: 0px, 2px ;
+}
+
+
+.list-cell:empty {
+    -fx-padding: 2px ;
+    -fx-background-color: #1d8c97 ;
+    -fx-background-insets: 0 ;
+}
+#search{
+    -fx-background-image:url('search.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right;
+    
+    
+}
+#hbox{
+    -fx-background-radius: 2;
+}
+
+#button_add,#button_list{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    
+    -fx-background-color: transparent;
+    
+    -fx-font-size: 1em; /* 12 */
+    -fx-text-fill: #828282;
+}
+#button_add:pressed{
+    
+}
+
+
+#button_add{
+    -fx-background-image:url('add.png');
+    -fx-background-repeat: no-repeat;
+     -fx-background-position: center;
+     
+    
+}
+
+#button_list{
+    -fx-background-image:url('list.png');
+    -fx-background-repeat: no-repeat;
+     -fx-background-position: center;
+     -fx-background-size:28px;
+}
